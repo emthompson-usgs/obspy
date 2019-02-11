@@ -24,6 +24,10 @@ master:
    * Stream.get_gaps() will now properly report gaps within Traces that
      have masked arrays (i.e. Traces that have been merged without a fill
      value, see #2299 and #2300).
+   * Deprecated the convert_id_to_quakeml_uri, regenerate_uuid, and
+     get_quakeml_uri methods of the ResourceIdentifier class (see #2303).
+   * Added get_quakeml_uri_str and get_quakeml_id methods to the
+     ResourceIdentifier class (see #2303).
  - obspy.clients.fdsn:
    * Adding more location codes to the default priority list in the mass
      downloader (see #2155, #2159).
