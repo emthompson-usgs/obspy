@@ -24,6 +24,8 @@ master:
    * Stream.get_gaps() will now properly report gaps within Traces that
      have masked arrays (i.e. Traces that have been merged without a fill
      value, see #2299 and #2300).
+   * Added option "label_epoch_dates" to Inventory/Network.plot_response() to
+     optionally add channel epoch start/end dates to legend labels (see #2309)
  - obspy.clients.fdsn:
    * Adding more location codes to the default priority list in the mass
      downloader (see #2155, #2159).
