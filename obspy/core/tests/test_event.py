@@ -126,7 +126,7 @@ class EventTestCase(unittest.TestCase):
 
     @unittest.skipIf(not BASEMAP_VERSION, 'basemap not installed')
     @unittest.skipIf(
-        BASEMAP_VERSION >= [1, 1, 0] and MATPLOTLIB_VERSION == [3, 0, 1],
+        BASEMAP_VERSION or [] >= [1, 1, 0] and MATPLOTLIB_VERSION == [3, 0, 1],
         'matplotlib 3.0.1 is not campatible with basemap')
     @unittest.skipIf(PROJ4_VERSION[0] == 5, 'unsupported proj4 library')
     def test_plot_farfield_without_quiver_with_maps(self):
@@ -516,7 +516,7 @@ class CatalogTestCase(unittest.TestCase):
 
 @unittest.skipIf(not BASEMAP_VERSION, 'basemap not installed')
 @unittest.skipIf(
-    BASEMAP_VERSION >= [1, 1, 0] and MATPLOTLIB_VERSION == [3, 0, 1],
+    BASEMAP_VERSION or [] >= [1, 1, 0] and MATPLOTLIB_VERSION == [3, 0, 1],
     'matplotlib 3.0.1 is not campatible with basemap')
 class CatalogBasemapTestCase(unittest.TestCase):
     """
