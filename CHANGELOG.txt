@@ -26,6 +26,10 @@ master:
      value, see #2299 and #2300).
    * Added copy method to Inventory class (see #2322).
  - obspy.clients.fdsn:
+   * Add new `_discover_services` boolean flag to the Client, which allows the
+     Client to skip the initial services query at instantiation.  This can
+     reduce the load on service providers, but skips checks against unsupported
+     query parameters.
    * Adding more location codes to the default priority list in the mass
      downloader (see #2155, #2159).
    * The mass downloader now raises a warning if all channels from a station
